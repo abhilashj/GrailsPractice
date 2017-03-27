@@ -5,6 +5,8 @@ class User {
     String UserName
     String EMail
     String DateOfBirth
+    static hasMany = [topic : com.Topic]
+
     static constraints = {
     }
 }

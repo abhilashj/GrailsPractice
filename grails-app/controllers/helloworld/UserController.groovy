@@ -1,4 +1,6 @@
 package helloworld
+
+
 import java.sql.Date
 
 class UserController {
@@ -9,7 +11,12 @@ class UserController {
         user.Name = "Abhilash"
         user.EMail = "abhilashjha@gmail.com"
         user.UserName ="demo"
-        user.save(flush:true)
+        //user.save(flush:true)
+        com.Topic topic = new com.Topic();
+        topic.name = "Topic 1"
+        topic.save(flush:true)
+        user.addToTopic(topic)
+        user.save()
     }
 
 }

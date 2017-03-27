@@ -9,5 +9,7 @@ class UrlMappings {
 
         "/"(view:"/index")
         "500"(view:'/error')
+
+      name personList:   "/li"(controller: "person", action: "list")
 	}
 }
